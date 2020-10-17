@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5058281170378349465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5058281170378349463}
+  - component: {fileID: 5058281170378349462}
+  m_Layer: 0
+  m_Name: spherePluslistB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5058281170378349463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058281170378349465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 248.16559, y: 145.80396, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5058281170378349462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058281170378349465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cfc105be5590946ac82c3cb4c0f782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listButton: {fileID: 0}
+  body: {fileID: 2329259503826017835, guid: b6fef3233e428a245bd25d2b79bc0418, type: 3}
+  list: {fileID: 0}
+  radiusI: {fileID: 0}
+  massI: {fileID: 0}
+  posxI: {fileID: 0}
+  posyI: {fileID: 0}
+  poszI: {fileID: 0}
+  velxI: {fileID: 0}
+  velyI: {fileID: 0}
+  velzI: {fileID: 0}
+  sphereMaterial: {fileID: 2100000, guid: c72978beba391404d8f21c82728fdc49, type: 2}
