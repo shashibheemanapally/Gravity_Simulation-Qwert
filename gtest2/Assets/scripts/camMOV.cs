@@ -19,17 +19,7 @@ public class camMOV : MonoBehaviour
     {
           cm = GetComponent<CinemachineFreeLook>();
           rotation = false;
-        //  if (tr == null)
-        //  {
-        //      cm.Follow = startCamPoint.transform;
-        //      cm.LookAt = startCamPoint.transform;
-        //  }
-        //      
-        //  else
-        //  {
-        //      cm.Follow = tr;
-        //      cm.LookAt = tr;
-        //  }
+        
 
         cm.Follow = startCamPoint.transform;
         cm.LookAt = startCamPoint.transform;

@@ -17,7 +17,9 @@ public class GameManage2 : MonoBehaviour
     public GameObject space;
     public GameObject axes;
     public GameObject cam;
-
+    public Material transMatTrail;
+    
+    
 
     CbodySpoof[] spoofbodylist ;
     GameObject bodyInstance;
@@ -25,45 +27,18 @@ public class GameManage2 : MonoBehaviour
     nullScriptforVtoggle[] lines;
     Cbody[] CB;
     Rigidbody heavyBody;
+    
 
 
-    // private void Awake()
-    // {
-    //     axes.SetActive(true);
-    //     space.GetComponent<Space>().enabled = false;
-    //
-    //    spoofbodylist = savedSimulations.simulationList[savedSimulations.selectedB];
-    //
-    //     foreach (var spoofBody in spoofbodylist)
-    //     {
-    //         bodyInstance = Instantiate(linedSp) as GameObject;
-    //         bodyInstanceCbody = bodyInstance.GetComponent<Cbody>();
-    //
-    //         bodyInstanceCbody.m = spoofBody.mass;
-    //         bodyInstanceCbody.setMass();
-    //
-    //         bodyInstanceCbody.radius = spoofBody.radius;
-    //         bodyInstanceCbody.setRadius();
-    //
-    //         bodyInstanceCbody.initialPos = spoofBody.initialPos;
-    //         bodyInstanceCbody.setInitialPos();
-    //
-    //         bodyInstanceCbody.initialVel = spoofBody.initialVel;
-    //         bodyInstanceCbody.setIntialVel();
-    //     }
-    //     lines = FindObjectsOfType<nullScriptforVtoggle>();
-    //
-    //     CB = FindObjectsOfType<Cbody>();
-    //     
-    // }
 
-        
+
+
     private void Awake()
     {
 
        
 
-
+        
 
         if (File.Exists(Application.persistentDataPath + "/" + savedSimulations.selectedB + ".CBSarrayHolder"))
         {
@@ -99,6 +74,32 @@ public class GameManage2 : MonoBehaviour
         lines = FindObjectsOfType<nullScriptforVtoggle>();
 
         CB = FindObjectsOfType<Cbody>();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {           
+                foreach (Cbody body in CB)
+                {
+                    body.GetComponent<TrailRenderer>().material = transMatTrail;
+                }
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {        
+                foreach (Cbody body in CB)
+                {
+                    body.setTrail(Random.Range(0, 4));
+                }
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            vLinesToggle();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            cam.GetComponent<camMOV>().rotation = !(cam.GetComponent<camMOV>().rotation);
+        }
+
     }
     private void Start()
     {
