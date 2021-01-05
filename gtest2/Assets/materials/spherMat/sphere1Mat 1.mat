@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: sphere1Mat 1
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _NORMALMAP
-  m_LightmapFlags: 2
+  m_ShaderKeywords: _NORMALMAP
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -74,4 +74,4 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.7169812, g: 0.28746888, b: 0.28746888, a: 1}
-    - _EmissionColor: {r: 0.2372549, g: 0.033333335, b: 0.033333335, a: 1}
+    - _EmissionColor: {r: 0.7075472, g: 0.5965758, b: 0.26366144, a: 1}

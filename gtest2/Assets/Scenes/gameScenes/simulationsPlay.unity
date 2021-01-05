@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delT: 0.02
+  CGobj: {fileID: 109073536156386932, guid: fe05f86345254f44eb52c69389d5341c, type: 3}
 --- !u!4 &184291011
 Transform:
   m_ObjectHideFlags: 0
@@ -1651,7 +1652,6 @@ MonoBehaviour:
   space: {fileID: 184291009}
   axes: {fileID: 922801858}
   cam: {fileID: 593500892}
-  transMatTrail: {fileID: 2100000, guid: 80b825e4a06b7af4a80321608df51ffa, type: 2}
 --- !u!4 &1331350690
 Transform:
   m_ObjectHideFlags: 0

@@ -25,17 +25,17 @@ public class Cbody : MonoBehaviour
     public Material[] bodyMat = new Material[4];
 
     
-
-
+    
 
     bool collisionOccured = false;
 
     private void Awake()
     {
         int k = Random.Range(0, 4);
-        setTrail(k);
-        this.GetComponent<TrailRenderer>().time = 0f;
 
+        this.GetComponent<TrailRenderer>().material = trailMat[k];
+        this.GetComponent<TrailRenderer>().time = 0f;
+        
 
         sphere = GetComponent<MeshRenderer>();
         sphere.material = bodyMat[k];
@@ -132,11 +132,7 @@ public class Cbody : MonoBehaviour
         currentVel = initialVel;
     }
 
-   public void setTrail(int k)
-    {
-        this.GetComponent<TrailRenderer>().material = trailMat[k];
-        
-    }
+   
   
 
   

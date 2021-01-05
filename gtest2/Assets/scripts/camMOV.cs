@@ -19,7 +19,17 @@ public class camMOV : MonoBehaviour
     {
           cm = GetComponent<CinemachineFreeLook>();
           rotation = false;
-        
+        //  if (tr == null)
+        //  {
+        //      cm.Follow = startCamPoint.transform;
+        //      cm.LookAt = startCamPoint.transform;
+        //  }
+        //      
+        //  else
+        //  {
+        //      cm.Follow = tr;
+        //      cm.LookAt = tr;
+        //  }
 
         cm.Follow = startCamPoint.transform;
         cm.LookAt = startCamPoint.transform;
@@ -52,7 +62,7 @@ public class camMOV : MonoBehaviour
         {   
             cm.m_XAxis.Value-=  0.05f;
         }
-        if(Input.GetAxis("Mouse ScrollWheel")<0f)
+        if(Input.GetAxis("Mouse ScrollWheel")<0f )
         {
             //scroll down
             float amp = Vector3.Magnitude(cm.transform.position - cm.m_LookAt.position);
@@ -61,6 +71,8 @@ public class camMOV : MonoBehaviour
             cm.m_Orbits[2].m_Height += -1*amp * 0.1f;
 
         }
+    
+
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             //scroll up
